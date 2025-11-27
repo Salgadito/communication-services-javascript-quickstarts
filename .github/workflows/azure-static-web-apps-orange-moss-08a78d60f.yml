@@ -29,9 +29,10 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations ######
           # AQUI ESTA EL CAMBIO DE LA RUTA:
-          app_location: "add-1-on-1-voice-calling" 
+          app_location: "add-1-on-1-voice-calling"
           api_location: ""
           output_location: "dist"
+          app_build_command: "npm run build"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
@@ -45,3 +46,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_TOKEN_NUEVO }}
           action: "close"
+
